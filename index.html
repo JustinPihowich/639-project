@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Photon by HTML5 UP</title>
+		<title>CS 639 Project</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -17,18 +17,161 @@
 		<!-- Header -->
 			<section id="header">
 				<div class="inner">
-					<span class="icon solid major fa-cloud"></span>
-					<h1>Hi, I'm <strong>Photon</strong>, another fine<br />
-					little freebie from <a href="http://html5up.net">HTML5 UP</a>.</h1>
-					<p>Accumsan feugiat mi commodo erat lorem ipsum, sed magna<br />
-					lobortis feugiat sapien sed etiam volutpat accumsan.</p>
+					<!-- <span class="icon solid major fa-cloud"></span> -->
+					<h1>CS 639 Project - Blemish Removal</h1>
+					<p>Navya Ponnapalli (nponnapalli)<br /> Sanjana Tarigoppula (tarigoppula)<br /> Mariya Siddiqui (mmsiddiqui2)<br /> Justin Pihowich (pihowich)</p>
 					<ul class="actions special">
-						<li><a href="#one" class="button scrolly">Discover</a></li>
+						<li><a href="#six" class="button scrolly">View report</a></li>
+						<li><a href="#seven" class="button scrolly">View timeline</a></li>
+						<li><a href="#three" class="button scrolly">View images</a></li>
 					</ul>
 				</div>
 			</section>
 
+
+		<!-- Six -->
+
+		<section id="six" class="main style1">
+			<div class="container">
+				<header class="major special">
+					<h2>Report questions</h2>
+				</header>
+				<p><strong>Briefly explain what problem you are trying to solve.</strong><br />
+					In the last proposal we thought of enhancing the 
+					algorithm to make it more inclusive for various skin tones, however, we decided to change our focus slightly to make 
+					the algorithm detect blemishes automatically. This is because when we tested the code for blemish removal 
+					on different skin tones, we realized that it works equally well for both images. However, the code does not automatically 
+					detect blemishes; the user has to click on whatever spot they want to be edited, and then the program enhances that area. This
+					will be a starting point for us to try and improve the existing solution we are using.
+				</p>
+				<p>
+					<strong>Why is this problem important?</strong><br />
+					This problem is relevant today because many people utilize photo-editing 
+					apps, so it would be interesting to see how we could apply concepts we have learned in the course so far to make our own feature 
+					to smooth out blemishes or enhance already existing implementations. It is also applicable as using funny or appearance altering
+					filters become more prevalent on social media apps like Snapchat and TikTok. Since this feature is already prevalent today, we 
+					want to work towards improving the feature. We hope to do so by experimenting with various filtering techniques that we found 
+					while researching our project.
+				</p>
+				<p>
+					<strong>What is the current state-of-the-art?</strong><br />
+					The current state-of-the-art for beautification apps and filters are live effects that adjust to your face's dimensions and color. 
+					These apps/filters will automatically detect specific features and modify them. Examples being, making your nose smaller, lips 
+					brighter, eyebrows narrower, acne removed, etc. These are done with advanced detection algorithms using varying techniques. Some of 
+					these methods involve feathering, Gaussian Mixture Models, convolutional neural networks, Fast Global Smoothing Filter, Guided Filter, 
+					Attribute-aware Dynamic Guided Filter, and many more<sup>(1)</sup>. These filters do not have to be live changing though and many apps 
+					will take a picture and apply thorough filters. Even most native camera apps on phones have basic filters that adjust exposure, saturation, 
+					etc.
+				</p>
+				<p>
+					<strong>Are you planning on re-implementing an existing solution, or propose your own new approach?</strong><br />
+					We are planning on re-implementing an existing solution by implementing Sobel Edge Detection. Additionally, we plan on exploring other 
+					edge detection algorithms that are mentioned in the research papers we are studying. We read through various research papers and learned 
+					about different filtering techniques such as Box Blurring, Gaussian Blurring, Differential Privacy Blurring, Gabor filter, Circle Detection, 
+					and Hough Transformation. We plan on understanding those algorithms and detecting which of these makes most sense for our project and 
+					experiment with those. We are particularly interested in experimenting with circle detection as well as the hough transformation to start 
+					off with.
+				</p>
+				<p>
+					<strong>If you are proposing your own approach, why do you think existing approaches cannot adequately solve this problem? Why do you think 
+					your solution will work better?</strong><br />
+					In the short term, we are not proposing a completely new approach. We are moreso looking to enhance the current algorithm by making it automatically 
+					detect blemishes rather than having to manually select each blemish. As of now, this existing approach is not the best because it does not 
+					have the option to just remove all blemishes at once, and it requires extra input from the user's end, which means it takes more time. In 
+					this way, we are hoping that once we add our improvements, the program will work better and more efficiently.
+				</p>
+				<p>
+					<strong>How will you evaluate the performance of your solution? What results and comparisons are you eventually planning to show? Include a 
+					time-line that you would like to follow.</strong><br />
+					We plan on meeting once a week to discuss our project implementation as well as work on the code to improve the existing applications. 
+					The week before the project presentation date, we will meet more frequently to make sure we are prepared to submit the best of our work. 
+					After we have our code written, we will work on testing it with images to see if the application is able to detect blemishes and then 
+					filter out those spots, instead of the current state where we are manually filtering out the pictures.
+				</p>
+			</div>
+		</section>
+
+		<section id="seven" class="main style2">
+			<div class="container">
+				<header class="major special">
+					<h2>Timeline</h2>
+				</header>
+					<div class="table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<td><b>Type</b></td>
+									<td><b>Description</b></td>
+									<td><b>Date(s)</b></td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Finished work</td>
+									<td>Midterm Report.</td>
+									<td>11/10</td>
+								</tr>
+								<tr>
+									<td>Meeting</td>
+									<td>Discuss basic filtering/detection methods with goal of being able to detect <b>large</b> blemishes automatically.</td>
+									<td>11/16</td>
+								</tr>
+								<tr>
+									<td>Research/Coding</td>
+									<td>Attempt to implement discussed solutions.</td>
+									<td>11-17 - 11/19</td>
+								</tr>
+								<tr>
+									<td>Meeting</td>
+									<td>Test out implementations and discuss improvements.<br />Focus on detection of <b>small/medium</b> blemishes.</td>
+									<td>11/20</td>
+								</tr>
+								<tr>
+									<td>Coding</td>
+									<td>Attempt to implement improvements.<br />Integrate detection and removal.</td>
+									<td>11/21-11/29</td>
+								</tr>
+								<tr>
+									<td>Meeting</td>
+									<td>Review solution and begin final preparations.</td>
+									<td>11/30</td>
+								</tr>
+								<tr>
+									<td>Coding</td>
+									<td>Update website to include relevant information.</td>
+									<td>11/31-12/1</td>
+								</tr>
+								<tr>
+									<td>Meeting</td>
+									<td>Review project and fix any lasting problems.</td>
+									<td>12/2</td>
+								</tr>
+								<tr>
+									<td>Preparation</td>
+									<td>Create presentation scripts/materials.</td>
+									<td>12/3-12/5</td>
+								</tr>
+								<tr>
+									<td>Finished work</td>
+									<td>Present project.</td>
+									<td>12/6 - 12/15<sup>*</sup></td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="2"></td>
+									<td>*depending on presentation date</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+
+			</div>
+		</section>
+
+
 		<!-- One -->
+		<!--
 			<section id="one" class="main style1">
 				<div class="container">
 					<div class="row gtr-150">
@@ -40,16 +183,15 @@
 							<p>Adipiscing a commodo ante nunc accumsan et interdum mi ante adipiscing. A nunc lobortis non nisl amet vis sed volutpat aclacus nascetur ac non. Lorem curae et ante amet sapien sed tempus adipiscing id accumsan.</p>
 						</div>
 						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img src="images/acne-face.jpg" alt="" /></span>
-							<span class="image fit"><img src="images/after2.png" alt="" /></span>
-							<span class="image fit"><img src="images/acne-face2.jpg" alt="" /></span>
-							<span class="image fit"><img src="images/after1.png" alt="" /></span>
+							<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
 						</div>
 					</div>
 				</div>
 			</section>
+		-->
 
 		<!-- Two -->
+		<!--
 			<section id="two" class="main style2">
 				<div class="container">
 					<div class="row gtr-150">
@@ -75,44 +217,45 @@
 					</div>
 				</div>
 			</section>
+		-->
 
 		<!-- Three -->
-		<!--
+		
 			<section id="three" class="main style1 special">
 				<div class="container">
 					<header class="major">
-						<h2>Adipiscing amet consequat</h2>
+						<h2>Before and After images using initial solution</h2>
 					</header>
-					<p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>
+					<p>These results are from manual selection, so they are not deterministic results by any means</p>
 					<div class="row gtr-150">
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/pic02.jpg" alt="" /></span>
-							<h3>Magna feugiat lorem</h3>
-							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
-							<ul class="actions special">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
+						<div class="col-6 col-12-medium">
+							<h3>Before</h3>
+							<span class="image fit"><img src="images/acne-face2.jpg" alt="" /></span>
 						</div>
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/pic03.jpg" alt="" /></span>
-							<h3>Magna feugiat lorem</h3>
-							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
-							<ul class="actions special">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
+						<div class="col-6 col-12-medium">
+							<h3>After</h3>
+							<span class="image fit"><img src="images/after1.PNG" alt="" /></span>
 						</div>
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<h3>Magna feugiat lorem</h3>
-							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
+						<div class="col-6 col-12-medium">
+							<span class="image fit"><img src="images/acne-face.jpg" alt="" /></span>
+						</div>
+						<div class="col-6 col-12-medium">
+							<span class="image fit"><img src="images/after2.PNG" alt="" /></span>
+						</div>
+						<div class="col-6 col-12-medium">
+							<span class="image fit"><img src="images/acne-back.jpg" alt="" /></span>
+						</div>
+						<div class="col-6 col-12-medium">
+							<span class="image fit"><img src="images/after3.PNG" alt="" /></span>
+							<!-- <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
 							<ul class="actions special">
 								<li><a href="#" class="button">More</a></li>
-							</ul>
+							</ul> -->
 						</div>
 					</div>
 				</div>
 			</section>
-		-->
+		
 
 		<!-- Four -->
 		<!--
@@ -451,11 +594,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		<!-- Footer -->
 			<section id="footer">
 				<ul class="icons">
+					<li>Website source code: <a href="https://github.com/JustinPihowich/639-project" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<!--
 					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
 					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
 					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 					<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					-->
 				</ul>
 				<ul class="copyright">
 					<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
