@@ -21,9 +21,10 @@
 					<h1>CS 639 Project - Blemish Removal</h1>
 					<p>Navya Ponnapalli (nponnapalli)<br /> Sanjana Tarigoppula (tarigoppula)<br /> Mariya Siddiqui (mmsiddiqui2)<br /> Justin Pihowich (pihowich)</p>
 					<ul class="actions special">
-						<li><a href="#six" class="button scrolly">View report</a></li>
-						<li><a href="#seven" class="button scrolly">View timeline</a></li>
-						<li><a href="#three" class="button scrolly">View images</a></li>
+						<li><a href="#six" class="button scrolly">Report</a></li>
+						<li><a href="#seven" class="button scrolly">Timeline</a></li>
+						<li><a href="#three" class="button scrolly">Images</a></li>
+						<li><a href="#two" class="button scrolly">Research</a></li>
 					</ul>
 				</div>
 			</section>
@@ -34,15 +35,29 @@
 		<section id="six" class="main style1">
 			<div class="container">
 				<header class="major special">
-					<h2>Report questions</h2>
+					<h2>Report questions</h2><br />
+					<h5>Some of these answers are similar to the original proposal, but they have been updated to reflect changes since then</h5>
 				</header>
-				<p><strong>Briefly explain what problem you are trying to solve.</strong><br />
+				<p>
+					<strong>Progress since the proposal.</strong><br />
 					In the last proposal we thought of enhancing the 
 					algorithm to make it more inclusive for various skin tones, however, we decided to change our focus slightly to make 
 					the algorithm detect blemishes automatically. This is because when we tested the code for blemish removal 
 					on different skin tones, we realized that it works equally well for both images. However, the code does not automatically 
 					detect blemishes; the user has to click on whatever spot they want to be edited, and then the program enhances that area. This
 					will be a starting point for us to try and improve the existing solution we are using.
+					<br>
+					<br>
+					Currently, the Python implementation we are applying 
+					uses a Sobel filter along with some best patch detection. It uses functions from cv2 (OpenCV) and numpy. For examples of this solution in action, 
+					view the before and after images section. To try and improve upon this solution, we have found research papers with possible changes to implement. 
+					These papers are some of our initial findings and may or may not contribute to the final solution. For more information regarding these papers, view 
+					the research section.
+				</p>
+				<p><strong>Briefly explain what problem you are trying to solve.</strong><br />
+					The problem we are trying to solve is that when we take portraits or any close-up pictures, our blemishes or acne are seen clearly. This is 
+					something that many people want to smoothen out or remove completely from photos to make themselves look acne free. The 
+					difficulties of this problem come from the desire to have the blemishes removed and skin accurately replaced as if there was no blemish at all.
 				</p>
 				<p>
 					<strong>Why is this problem important?</strong><br />
@@ -57,16 +72,18 @@
 					<strong>What is the current state-of-the-art?</strong><br />
 					The current state-of-the-art for beautification apps and filters are live effects that adjust to your face's dimensions and color. 
 					These apps/filters will automatically detect specific features and modify them. Examples being, making your nose smaller, lips 
-					brighter, eyebrows narrower, acne removed, etc. These are done with advanced detection algorithms using varying techniques. Some of 
-					these methods involve feathering, Gaussian Mixture Models, convolutional neural networks, Fast Global Smoothing Filter, Guided Filter, 
-					Attribute-aware Dynamic Guided Filter, and many more<sup>(1)</sup>. These filters do not have to be live changing though and many apps 
+					brighter, eyebrows narrower, acne removed, etc. These are done with advanced detection algorithms using varying techniques.
+					<br>
+					<br>
+					Some of these methods involve Gaussian Mixture Models, convolutional neural networks, Fast Global Smoothing Filter, Mutually Guided Filter, 
+					Attribute-aware Dynamic Guided Filter, and many more<sup>(1)</sup>. These filters do not have to be live changing though, and many apps 
 					will take a picture and apply thorough filters. Even most native camera apps on phones have basic filters that adjust exposure, saturation, 
 					etc.
 				</p>
 				<p>
 					<strong>Are you planning on re-implementing an existing solution, or propose your own new approach?</strong><br />
-					We are planning on re-implementing an existing solution by implementing Sobel Edge Detection. Additionally, we plan on exploring other 
-					edge detection algorithms that are mentioned in the research papers we are studying. We read through various research papers and learned 
+					We are planning on re-implementing an existing solution using Sobel Edge Detection. Additionally, we plan on exploring other 
+					edge detection algorithms that are mentioned in the research papers we are studying as well as class lectures. We read through various research papers and learned 
 					about different filtering techniques such as Box Blurring, Gaussian Blurring, Differential Privacy Blurring, Gabor filter, Circle Detection, 
 					and Hough Transformation. We plan on understanding those algorithms and detecting which of these makes most sense for our project and 
 					experiment with those. We are particularly interested in experimenting with circle detection as well as the hough transformation to start 
@@ -190,43 +207,17 @@
 			</section>
 		-->
 
-		<!-- Two -->
-		<!--
-			<section id="two" class="main style2">
-				<div class="container">
-					<div class="row gtr-150">
-						<div class="col-6 col-12-medium">
-							<ul class="major-icons">
-								<li><span class="icon solid style1 major fa-code"></span></li>
-								<li><span class="icon solid style2 major fa-bolt"></span></li>
-								<li><span class="icon solid style3 major fa-camera-retro"></span></li>
-								<li><span class="icon solid style4 major fa-cog"></span></li>
-								<li><span class="icon solid style5 major fa-desktop"></span></li>
-								<li><span class="icon solid style6 major fa-calendar"></span></li>
-							</ul>
-						</div>
-						<div class="col-6 col-12-medium">
-							<header class="major">
-								<h2>Lorem ipsum dolor adipiscing<br />
-								amet dolor consequat</h2>
-							</header>
-							<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
-							<p>Blandit faucibus proin. Ac aliquam integer adipiscing enim non praesent vis commodo nunc phasellus cubilia ac risus accumsan. Accumsan blandit. Lobortis phasellus non lobortis dit varius mi varius accumsan lobortis. Blandit ante aliquam lacinia lorem lobortis semper morbi col faucibus vitae integer placerat accumsan orci eu mi odio tempus adipiscing adipiscing adipiscing curae consequat feugiat etiam dolore.</p>
-							<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
-						</div>
-					</div>
-				</div>
-			</section>
-		-->
+		
+		
 
 		<!-- Three -->
 		
 			<section id="three" class="main style1 special">
 				<div class="container">
 					<header class="major">
-						<h2>Before and After images using initial solution</h2>
+						<h2>Before and After images using initial solution</h2><br />
+						<h5>These results are from manual selection, so they are not deterministic results by any means</h5>
 					</header>
-					<p>These results are from manual selection, so they are not deterministic results by any means</p>
 					<div class="row gtr-150">
 						<div class="col-6 col-12-medium">
 							<h3>Before</h3>
@@ -255,7 +246,69 @@
 					</div>
 				</div>
 			</section>
+
 		
+		<!-- Two -->
+		
+			<section id="two" class="main style2">
+				<div class="container">
+					<header class="major special">
+						<h2>Research</h2>
+					</header>
+					<p>
+						<ol>
+							<li>"FabSoften: Face Beautification via Dynamic Skin Smoothing, Guided
+							Feathering, and Texture Restoration" <a href="https://openaccess.thecvf.com/content_CVPRW_2020/papers/w31/Velusamy_FabSoften_Face_Beautification_via_Dynamic_Skin_Smoothing_Guided_Feathering_and_CVPRW_2020_paper.pdf">[Link]</a>
+								<ul>
+									<li>This paper goes over the implementation of a smoothing filter method that is named attribute-aware dynamic smoothing. It is guided by facial attributes like the number of blemishes, skin texture, skin color, etc. It also details comparisons to other state-of-the-art techniques.</li>
+								</ul>
+							</li>
+							<li>"Different Approaches to Blurring Digital Images and Their Effect on Facial Detection" <a href="https://scholarworks.uark.edu/cgi/viewcontent.cgi?article=1067&context=csceuht">[Link]</a>
+								<ul>
+									<li>This source discusses the various types of image blurring techniques as well as their effect on facial detection. Specifically, it talks about how privacy is being compromised because attackers use facial detection techniques for potential identity detection. While this is not the premise of our project, this paper is still useful because it goes through various techniques which can be used for blurring faces, and that is applicable to our project.</li>
+									<li>This paper goes through different blurring techniques such as Box Blurring, Gaussian Blurring, and Differential Privacy Blurring. It compares these techniques using data sets and evaluates which is the best.</li>
+									<li>Low-Pass Filters and High-Pass Filters are also explained, and this allows us to understand edge detection as well as how the blurring techniques relate to these types of filters.</li>
+									<li>Lastly, the paper touches on how matrices are involved in each blurring technique, so it provides a mathematical background for us to study as well.</li>
+								</ul>
+							</li>
+							<li>"Computer Vision with Machine Learning on Smartphones for Beauty Applications" <a href="https://eprints.bournemouth.ac.uk/37277/1/MIU%2C%20Valentin_D.Eng._2021_redacted.pdf">[Link]</a>
+								<ul>
+									<li>This paper gives a brief background on facial filtering and object detection through different applications such as makeup transfer and blemish removal. Chapter 5 of this paper discusses wrinkle and blemish removal through different filtering techniques. It specifically talks about the Gabor filter and explains the algorithm as well as illustrates some of the code implementations. The author discusses the background of the Gabor filter and how to estimate skin scores. They also show how the code can be implemented to give certain results. This chapter also mentions the shortcomings of the Gabor filter and what other methods are currently being researched for further improvements in the future.</li>
+									<li>This article provided us with foundational knowledge as it gave us more background on the topic and walked us through the algorithms. The current application that we are basing our project on uses the Sobel filter and this research paper gave us a new filtering method that we can test out. Our goal is to find a filtering technique that works best for blemish removal and this paper furthered our discussion on what other methods we can experiment with before picking one that works most effectively.</li>
+									<li>Low-Pass Filters and High-Pass Filters are also explained, and this allows us to understand edge detection as well as how the blurring techniques relate to these types of filters.</li>
+								</ul>
+							</li>
+							<li>"A Fast Multi-Modal Approach to Facial Feature Detection" <a href="https://ieeexplore-ieee-org.ezproxy.library.wisc.edu/stamp/stamp.jsp?tp=&arnumber=4129472">[Link]</a>
+								<ul>
+									<li>This paper overviews a method to help identify eyes, nose, and the mouth on faces by using 2D information. This allows facial features to be identified quickly and precisely without compromising too much on robustness. The paper presents the algorithm the researchers used and how each aspect of the algorithm (2D and 3D) affected the results.</li>
+								</ul>
+							</li>
+						</ol>
+					</p>
+					<!-- <div class="row gtr-150">
+						<div class="col-6 col-12-medium">
+							<ul class="major-icons">
+								<li>hello</li>
+								<li><span class="icon solid style2 major fa-bolt"></span></li>
+								<li><span class="icon solid style3 major fa-camera-retro"></span></li>
+								<li><span class="icon solid style4 major fa-cog"></span></li>
+								<li><span class="icon solid style5 major fa-desktop"></span></li>
+								<li><span class="icon solid style6 major fa-calendar"></span></li>
+							</ul>
+						</div>
+						<div class="col-6 col-12-medium">
+							<header class="major">
+								<h2>Lorem ipsum dolor adipiscing<br />
+								amet dolor consequat</h2>
+							</header>
+							<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
+							<p>Blandit faucibus proin. Ac aliquam integer adipiscing enim non praesent vis commodo nunc phasellus cubilia ac risus accumsan. Accumsan blandit. Lobortis phasellus non lobortis dit varius mi varius accumsan lobortis. Blandit ante aliquam lacinia lorem lobortis semper morbi col faucibus vitae integer placerat accumsan orci eu mi odio tempus adipiscing adipiscing adipiscing curae consequat feugiat etiam dolore.</p>
+							<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
+						</div>
+					</div> -->
+				</div>
+			</section>
+
 
 		<!-- Four -->
 		<!--
