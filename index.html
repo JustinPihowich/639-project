@@ -312,6 +312,95 @@
 				</div>
 			</section>
 
+			<!-- Eight -->
+		
+			<section id="eight" class="main style1 special">
+				<div class="container">
+					<header class="major">
+						<h2>Attempted detection methods</h2><br />
+						<h5>These are from a combination of initial manual filtering and automatic detection</h5>
+					</header>
+					<div class="row gtr-150">
+						<div class="col-6 col-12-medium">
+							<h3>Result of manual filtering (on the back image from the prior table)</h3>
+							<span class="image fit"><img src="images/grayscale.png" alt="" /></span>
+						</div>
+						<div class="col-6 col-12-medium">
+							<h3>Detection from earlier versions of our circle detection</h3>
+							<span class="image fit"><img src="images/grey_circles.png" alt="" /></span>
+						</div>
+					</div>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<header class="major">
+						<h2>Automatic Detection Images</h2><br />
+						<h5>These results are from automatic circle detection using filters.</h5>
+					</header>
+					<div class="row gtr-150">
+						<div class="col-6 col-12-medium">
+							<h3>Before</h3>
+							<span class="image fit"><img src="images/acne-back.jpg" alt="" /></span>
+						</div>
+						<div class="col-6 col-12-medium">
+							<h3>After</h3>
+							<span class="image fit"><img src="images/auto.png" alt="" /></span>
+						</div>
+						<div class="col-6 col-12-medium">
+							<h3>Filter parameters used for circle detection</h3>
+							<span class="image fit"><img src="images/filters.png" alt="" /></span>
+						</div>
+						<div class="col-6 col-12-medium">
+							<h3>Example of where detection is found</h3>
+							<span class="image fit"><img src="images/circles.png" alt="" /></span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="twenty" class="main style2">
+				<div class="container">
+					<header class="major special">
+						<h2>Problems and Learnings</h2>
+					</header>
+					<p>
+						A major hurdle we had to overcome was figuring out how to identify the best patch given the area that it is in. After digging deeper through research papers and studies, we came across circle detection as a means to help us in this process
+						<br>
+						<br>
+						We also struggled to connect the detection piece with the actual filtering method. We were able to implement an application that would detect all the acne spots using circle detection but we struggled to get those blemishes removed using the sobel filter.
+					</p>
+				</div>
+			</section>
+
+		<!-- Thirteen -->
+
+		<section id="thirteen" class="main style1">
+			<div class="container">
+				<header class="major special">
+					<h2>Future Implementations & Improvements</h2><br />
+				</header>
+				<p>
+					One of the major issues that we came across in our automatic detection implementation was that it has trouble detecting white heads. In the images where the acne is red with a white bump the filter does not do much. This is something that we would like our project to continue to improve towards for the future. Being able to detect discolorations of varying forms is a key aspect in taking this project to the next level. 
+					<br>
+					<br>
+					Another future implementation for this project could be to make a live filter that works on input directly from a camera — similar to snapchat, instagram or tiktok filters 
+				</p>
+			</div>
+		</section>
+
+		<section id="thirty" class="main style2">
+			<div class="container">
+				<header class="major special">
+					<h2>Our Presentation</h2>
+				</header>
+				
+					<iframe width="1280" height="720" src="https://www.youtube.com/embed/4QIgPPeKj18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</section>
+
 
 		<!-- Four -->
 		<!--
