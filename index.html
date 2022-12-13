@@ -1,0 +1,764 @@
+<!DOCTYPE HTML>
+<!--
+	Photon by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>CS 639 Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<div class="inner">
+					<!-- <span class="icon solid major fa-cloud"></span> -->
+					<h1>CS 639 Project - Blemish Removal</h1>
+					<p>Navya Ponnapalli (nponnapalli)<br /> Sanjana Tarigoppula (tarigoppula)<br /> Mariya Siddiqui (mmsiddiqui2)<br /> Justin Pihowich (pihowich)</p>
+					<ul class="actions special">
+						<li><a href="#six" class="button scrolly">Report</a></li>
+						<li><a href="#seven" class="button scrolly">Timeline</a></li>
+						<li><a href="#three" class="button scrolly">Images</a></li>
+						<li><a href="#two" class="button scrolly">Research</a></li>
+					</ul>
+				</div>
+			</section>
+
+
+		<!-- Six -->
+
+		<section id="six" class="main style1">
+			<div class="container">
+				<header class="major special">
+					<h2>Report questions</h2><br />
+					<h5>Some of these answers are similar to the original proposal, but they have been updated to reflect changes since then</h5>
+				</header>
+				<p>
+					<strong>Progress since the proposal.</strong><br />
+					In the last proposal we thought of enhancing the 
+					algorithm to make it more inclusive for various skin tones, however, we decided to change our focus slightly to make 
+					the algorithm detect blemishes automatically. This is because when we tested the code for blemish removal 
+					on different skin tones, we realized that it works equally well for both images. However, the code does not automatically 
+					detect blemishes; the user has to click on whatever spot they want to be edited, and then the program enhances that area. This
+					will be a starting point for us to try and improve the existing solution we are using.
+					<br>
+					<br>
+					Currently, the Python implementation we are applying 
+					uses a Sobel filter along with some best patch detection. It uses functions from cv2 (OpenCV) and numpy. For examples of this solution in action, 
+					view the before and after images section. To try and improve upon this solution, we have found research papers with possible changes to implement. 
+					These papers are some of our initial findings and may or may not contribute to the final solution. For more information regarding these papers, view 
+					the research section.
+				</p>
+				<p><strong>Briefly explain what problem you are trying to solve.</strong><br />
+					The problem we are trying to solve is that when we take portraits or any close-up pictures, our blemishes or acne are seen clearly. This is 
+					something that many people want to smoothen out or remove completely from photos to make themselves look acne free. The 
+					difficulties of this problem come from the desire to have the blemishes removed and skin accurately replaced as if there was no blemish at all.
+				</p>
+				<p>
+					<strong>Why is this problem important?</strong><br />
+					This problem is relevant today because many people utilize photo-editing 
+					apps, so it would be interesting to see how we could apply concepts we have learned in the course so far to make our own feature 
+					to smooth out blemishes or enhance already existing implementations. It is also applicable as using funny or appearance altering
+					filters become more prevalent on social media apps like Snapchat and TikTok. Since this feature is already prevalent today, we 
+					want to work towards improving the feature. We hope to do so by experimenting with various filtering techniques that we found 
+					while researching our project.
+				</p>
+				<p>
+					<strong>What is the current state-of-the-art?</strong><br />
+					The current state-of-the-art for beautification apps and filters are live effects that adjust to your face's dimensions and color. 
+					These apps/filters will automatically detect specific features and modify them. Examples being, making your nose smaller, lips 
+					brighter, eyebrows narrower, acne removed, etc. These are done with advanced detection algorithms using varying techniques.
+					<br>
+					<br>
+					Some of these methods involve Gaussian Mixture Models, convolutional neural networks, Fast Global Smoothing Filter, Mutually Guided Filter, 
+					Attribute-aware Dynamic Guided Filter, and many more<sup>(1)</sup>. These filters do not have to be live changing though, and many apps 
+					will take a picture and apply thorough filters. Even most native camera apps on phones have basic filters that adjust exposure, saturation, 
+					etc.
+				</p>
+				<p>
+					<strong>Are you planning on re-implementing an existing solution, or propose your own new approach?</strong><br />
+					We are planning on re-implementing an existing solution using Sobel Edge Detection. Additionally, we plan on exploring other 
+					edge detection algorithms that are mentioned in the research papers we are studying as well as class lectures. We read through various research papers and learned 
+					about different filtering techniques such as Box Blurring, Gaussian Blurring, Differential Privacy Blurring, Gabor filter, Circle Detection, 
+					and Hough Transformation. We plan on understanding those algorithms and detecting which of these makes most sense for our project and 
+					experiment with those. We are particularly interested in experimenting with circle detection as well as the hough transformation to start 
+					off with.
+				</p>
+				<p>
+					<strong>If you are proposing your own approach, why do you think existing approaches cannot adequately solve this problem? Why do you think 
+					your solution will work better?</strong><br />
+					In the short term, we are not proposing a completely new approach. We are moreso looking to enhance the current algorithm by making it automatically 
+					detect blemishes rather than having to manually select each blemish. As of now, this existing approach is not the best because it does not 
+					have the option to just remove all blemishes at once, and it requires extra input from the user's end, which means it takes more time. In 
+					this way, we are hoping that once we add our improvements, the program will work better and more efficiently.
+				</p>
+				<p>
+					<strong>How will you evaluate the performance of your solution? What results and comparisons are you eventually planning to show? Include a 
+					time-line that you would like to follow.</strong><br />
+					We will evaluate the performance of the solution by testing it with images to see if the application is able to detect blemishes and then filter 
+					out those spots, instead of the current state where we are manually filtering out the pictures. We have not created a concrete metric for this yet, 
+					but will hopefully develop a more rigorous evaluation as the project progresses.
+					<br>
+					<br>
+					We plan on meeting once a week to discuss our project implementation as well as work on the code to improve the existing applications. The week before the project presentation date, we will meet more frequently to make sure we are prepared to submit the project and present.
+
+				</p>
+			</div>
+		</section>
+
+		<section id="seven" class="main style2">
+			<div class="container">
+				<header class="major special">
+					<h2>Timeline</h2>
+				</header>
+					<div class="table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<td><b>Type</b></td>
+									<td><b>Description</b></td>
+									<td><b>Date(s)</b></td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Finished work</td>
+									<td>Midterm Report.</td>
+									<td>11/10</td>
+								</tr>
+								<tr>
+									<td>Meeting</td>
+									<td>Discuss basic filtering/detection methods with goal of being able to detect <b>large</b> blemishes automatically.</td>
+									<td>11/16</td>
+								</tr>
+								<tr>
+									<td>Research/Coding</td>
+									<td>Attempt to implement discussed solutions.</td>
+									<td>11-17 - 11/19</td>
+								</tr>
+								<tr>
+									<td>Meeting</td>
+									<td>Test out implementations and discuss improvements.<br />Focus on detection of <b>small/medium</b> blemishes.</td>
+									<td>11/20</td>
+								</tr>
+								<tr>
+									<td>Coding</td>
+									<td>Attempt to implement improvements.<br />Integrate detection and removal.</td>
+									<td>11/21-11/29</td>
+								</tr>
+								<tr>
+									<td>Meeting</td>
+									<td>Review solution and begin final preparations.</td>
+									<td>11/30</td>
+								</tr>
+								<tr>
+									<td>Coding</td>
+									<td>Update website to include relevant information.</td>
+									<td>11/31-12/1</td>
+								</tr>
+								<tr>
+									<td>Meeting</td>
+									<td>Review project and fix any lasting problems.</td>
+									<td>12/2</td>
+								</tr>
+								<tr>
+									<td>Preparation</td>
+									<td>Create presentation scripts/materials.</td>
+									<td>12/3-12/5</td>
+								</tr>
+								<tr>
+									<td>Finished work</td>
+									<td>Present project.</td>
+									<td>12/6 - 12/15<sup>*</sup></td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="2"></td>
+									<td>*depending on presentation date</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+
+			</div>
+		</section>
+
+
+		<!-- One -->
+		<!--
+			<section id="one" class="main style1">
+				<div class="container">
+					<div class="row gtr-150">
+						<div class="col-6 col-12-medium">
+							<header class="major">
+								<h2>Lorem ipsum dolor adipiscing<br />
+								amet dolor consequat</h2>
+							</header>
+							<p>Adipiscing a commodo ante nunc accumsan et interdum mi ante adipiscing. A nunc lobortis non nisl amet vis sed volutpat aclacus nascetur ac non. Lorem curae et ante amet sapien sed tempus adipiscing id accumsan.</p>
+						</div>
+						<div class="col-6 col-12-medium imp-medium">
+							<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
+						</div>
+					</div>
+				</div>
+			</section>
+		-->
+
+		
+		
+
+		<!-- Three -->
+		
+			<section id="three" class="main style1 special">
+				<div class="container">
+					<header class="major">
+						<h2>Before and After images using initial solution</h2><br />
+						<h5>These results are from manual selection, so they are not deterministic results by any means</h5>
+					</header>
+					<div class="row gtr-150">
+						<div class="col-6 col-12-medium">
+							<h3>Before</h3>
+							<span class="image fit"><img src="images/acne-face2.jpg" alt="" /></span>
+						</div>
+						<div class="col-6 col-12-medium">
+							<h3>After</h3>
+							<span class="image fit"><img src="images/after1.PNG" alt="" /></span>
+						</div>
+						<div class="col-6 col-12-medium">
+							<span class="image fit"><img src="images/acne-face.jpg" alt="" /></span>
+						</div>
+						<div class="col-6 col-12-medium">
+							<span class="image fit"><img src="images/after2.PNG" alt="" /></span>
+						</div>
+						<div class="col-6 col-12-medium">
+							<span class="image fit"><img src="images/acne-back.jpg" alt="" /></span>
+						</div>
+						<div class="col-6 col-12-medium">
+							<span class="image fit"><img src="images/after3.PNG" alt="" /></span>
+							<!-- <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
+							<ul class="actions special">
+								<li><a href="#" class="button">More</a></li>
+							</ul> -->
+						</div>
+					</div>
+				</div>
+			</section>
+
+		
+		<!-- Two -->
+		
+			<section id="two" class="main style2">
+				<div class="container">
+					<header class="major special">
+						<h2>Research</h2>
+					</header>
+					<p>
+						<ol>
+							<li>"FabSoften: Face Beautification via Dynamic Skin Smoothing, Guided
+							Feathering, and Texture Restoration" <a href="https://openaccess.thecvf.com/content_CVPRW_2020/papers/w31/Velusamy_FabSoften_Face_Beautification_via_Dynamic_Skin_Smoothing_Guided_Feathering_and_CVPRW_2020_paper.pdf">[Link]</a>
+								<ul>
+									<li>This paper goes over the implementation of a smoothing filter method that is named attribute-aware dynamic smoothing. It is guided by facial attributes like the number of blemishes, skin texture, skin color, etc. It also details comparisons to other state-of-the-art techniques.</li>
+								</ul>
+							</li>
+							<li>"Different Approaches to Blurring Digital Images and Their Effect on Facial Detection" <a href="https://scholarworks.uark.edu/cgi/viewcontent.cgi?article=1067&context=csceuht">[Link]</a>
+								<ul>
+									<li>This source discusses the various types of image blurring techniques as well as their effect on facial detection. Specifically, it talks about how privacy is being compromised because attackers use facial detection techniques for potential identity detection. While this is not the premise of our project, this paper is still useful because it goes through various techniques which can be used for blurring faces, and that is applicable to our project.</li>
+									<li>This paper goes through different blurring techniques such as Box Blurring, Gaussian Blurring, and Differential Privacy Blurring. It compares these techniques using data sets and evaluates which is the best.</li>
+									<li>Low-Pass Filters and High-Pass Filters are also explained, and this allows us to understand edge detection as well as how the blurring techniques relate to these types of filters.</li>
+									<li>Lastly, the paper touches on how matrices are involved in each blurring technique, so it provides a mathematical background for us to study as well.</li>
+								</ul>
+							</li>
+							<li>"Computer Vision with Machine Learning on Smartphones for Beauty Applications" <a href="https://eprints.bournemouth.ac.uk/37277/1/MIU%2C%20Valentin_D.Eng._2021_redacted.pdf">[Link]</a>
+								<ul>
+									<li>This paper gives a brief background on facial filtering and object detection through different applications such as makeup transfer and blemish removal. Chapter 5 of this paper discusses wrinkle and blemish removal through different filtering techniques. It specifically talks about the Gabor filter and explains the algorithm as well as illustrates some of the code implementations. The author discusses the background of the Gabor filter and how to estimate skin scores. They also show how the code can be implemented to give certain results. This chapter also mentions the shortcomings of the Gabor filter and what other methods are currently being researched for further improvements in the future.</li>
+									<li>This article provided us with foundational knowledge as it gave us more background on the topic and walked us through the algorithms. The current application that we are basing our project on uses the Sobel filter and this research paper gave us a new filtering method that we can test out. Our goal is to find a filtering technique that works best for blemish removal and this paper furthered our discussion on what other methods we can experiment with before picking one that works most effectively.</li>
+									<li>Low-Pass Filters and High-Pass Filters are also explained, and this allows us to understand edge detection as well as how the blurring techniques relate to these types of filters.</li>
+								</ul>
+							</li>
+							<li>"A Fast Multi-Modal Approach to Facial Feature Detection" <a href="https://ieeexplore-ieee-org.ezproxy.library.wisc.edu/stamp/stamp.jsp?tp=&arnumber=4129472">[Link]</a>
+								<ul>
+									<li>This paper overviews a method to help identify eyes, nose, and the mouth on faces by using 2D information. This allows facial features to be identified quickly and precisely without compromising too much on robustness. The paper presents the algorithm the researchers used and how each aspect of the algorithm (2D and 3D) affected the results.</li>
+								</ul>
+							</li>
+						</ol>
+					</p>
+					<!-- <div class="row gtr-150">
+						<div class="col-6 col-12-medium">
+							<ul class="major-icons">
+								<li>hello</li>
+								<li><span class="icon solid style2 major fa-bolt"></span></li>
+								<li><span class="icon solid style3 major fa-camera-retro"></span></li>
+								<li><span class="icon solid style4 major fa-cog"></span></li>
+								<li><span class="icon solid style5 major fa-desktop"></span></li>
+								<li><span class="icon solid style6 major fa-calendar"></span></li>
+							</ul>
+						</div>
+						<div class="col-6 col-12-medium">
+							<header class="major">
+								<h2>Lorem ipsum dolor adipiscing<br />
+								amet dolor consequat</h2>
+							</header>
+							<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
+							<p>Blandit faucibus proin. Ac aliquam integer adipiscing enim non praesent vis commodo nunc phasellus cubilia ac risus accumsan. Accumsan blandit. Lobortis phasellus non lobortis dit varius mi varius accumsan lobortis. Blandit ante aliquam lacinia lorem lobortis semper morbi col faucibus vitae integer placerat accumsan orci eu mi odio tempus adipiscing adipiscing adipiscing curae consequat feugiat etiam dolore.</p>
+							<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
+						</div>
+					</div> -->
+				</div>
+			</section>
+
+			<!-- Eight -->
+		
+			<section id="eight" class="main style1 special">
+				<div class="container">
+					<header class="major">
+						<h2>Attempted detection methods</h2><br />
+						<h5>These are from a combination of initial manual filtering and automatic detection</h5>
+					</header>
+					<div class="row gtr-150">
+						<div class="col-6 col-12-medium">
+							<h3>Result of manual filtering (on the back image from the prior table)</h3>
+							<span class="image fit"><img src="images/grayscale.png" alt="" /></span>
+						</div>
+						<div class="col-6 col-12-medium">
+							<h3>Detection from earlier versions of our circle detection</h3>
+							<span class="image fit"><img src="images/grey_circles.png" alt="" /></span>
+						</div>
+					</div>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<header class="major">
+						<h2>Automatic Detection Images</h2><br />
+						<h5>These results are from automatic circle detection using filters.</h5>
+					</header>
+					<div class="row gtr-150">
+						<div class="col-6 col-12-medium">
+							<h3>Before</h3>
+							<span class="image fit"><img src="images/acne-back.jpg" alt="" /></span>
+						</div>
+						<div class="col-6 col-12-medium">
+							<h3>After</h3>
+							<span class="image fit"><img src="images/auto.png" alt="" /></span>
+						</div>
+						<div class="col-6 col-12-medium">
+							<h3>Filter parameters used for circle detection</h3>
+							<span class="image fit"><img src="images/filters.png" alt="" /></span>
+						</div>
+						<div class="col-6 col-12-medium">
+							<h3>Example of where detection is found</h3>
+							<span class="image fit"><img src="images/circles.png" alt="" /></span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="twenty" class="main style2">
+				<div class="container">
+					<header class="major special">
+						<h2>Problems and Learnings</h2>
+					</header>
+					<p>
+						A major hurdle we had to overcome was figuring out how to identify the best patch given the area that it is in. After digging deeper through research papers and studies, we came across circle detection as a means to help us in this process
+						<br>
+						<br>
+						We also struggled to connect the detection piece with the actual filtering method. We were able to implement an application that would detect all the acne spots using circle detection but we struggled to get those blemishes removed using the sobel filter.
+					</p>
+				</div>
+			</section>
+
+		<!-- Thirteen -->
+
+		<section id="thirteen" class="main style1">
+			<div class="container">
+				<header class="major special">
+					<h2>Future Implementations & Improvements</h2><br />
+				</header>
+				<p>
+					One of the major issues that we came across in our automatic detection implementation was that it has trouble detecting white heads. In the images where the acne is red with a white bump the filter does not do much. This is something that we would like our project to continue to improve towards for the future. Being able to detect discolorations of varying forms is a key aspect in taking this project to the next level. 
+					<br>
+					<br>
+					Another future implementation for this project could be to make a live filter that works on input directly from a camera — similar to snapchat, instagram or tiktok filters 
+				</p>
+			</div>
+		</section>
+
+		<section id="thirty" class="main style2">
+			<div class="container">
+				<header class="major special">
+					<h2>Our Presentation</h2>
+				</header>
+				
+					<iframe width="1280" height="720" src="https://www.youtube.com/embed/4QIgPPeKj18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</section>
+
+
+		<!-- Four -->
+		<!--
+			<section id="four" class="main style2 special">
+				<div class="container">
+					<header class="major">
+						<h2>Ipsum feugiat consequat?</h2>
+					</header>
+					<p>Sed lacus nascetur ac ante amet sapien.</p>
+					<ul class="actions special">
+						<li><a href="#" class="button wide primary">Sign Up</a></li>
+						<li><a href="#" class="button wide">Learn More</a></li>
+					</ul>
+				</div>
+			</section>
+		-->
+
+		<!-- Five -->
+		<!--
+			<section id="five" class="main style1">
+				<div class="container">
+					<header class="major special">
+						<h2>Elements</h2>
+					</header>
+
+					<section>
+						<h4>Text</h4>
+						<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+						This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+						This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+						<hr />
+						<header>
+							<h4>Heading with a Subtitle</h4>
+							<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+						</header>
+						<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+						<header>
+							<h5>Heading with a Subtitle</h5>
+							<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+						</header>
+						<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+						<hr />
+						<h2>Heading Level 2</h2>
+						<h3>Heading Level 3</h3>
+						<h4>Heading Level 4</h4>
+						<h5>Heading Level 5</h5>
+						<h6>Heading Level 6</h6>
+						<hr />
+						<h5>Blockquote</h5>
+						<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+						<h5>Preformatted</h5>
+						<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+print 'Iteration ' + i;
+deck.shuffle();
+i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+					</section>
+
+					<section>
+						<h4>Lists</h4>
+						<div class="row">
+							<div class="col-6 col-12-medium">
+								<h5>Unordered</h5>
+								<ul>
+									<li>Dolor pulvinar etiam.</li>
+									<li>Sagittis adipiscing.</li>
+									<li>Felis enim feugiat.</li>
+								</ul>
+								<h5>Alternate</h5>
+								<ul class="alt">
+									<li>Dolor pulvinar etiam.</li>
+									<li>Sagittis adipiscing.</li>
+									<li>Felis enim feugiat.</li>
+								</ul>
+							</div>
+							<div class="col-6 col-12-medium">
+								<h5>Ordered</h5>
+								<ol>
+									<li>Dolor pulvinar etiam.</li>
+									<li>Etiam vel felis viverra.</li>
+									<li>Felis enim feugiat.</li>
+									<li>Dolor pulvinar etiam.</li>
+									<li>Etiam vel felis lorem.</li>
+									<li>Felis enim et feugiat.</li>
+								</ol>
+								<h5>Icons</h5>
+								<ul class="icons">
+									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								</ul>
+							</div>
+						</div>
+						<h5>Actions</h5>
+						<div class="row">
+							<div class="col-6 col-12-medium">
+								<ul class="actions">
+									<li><a href="#" class="button primary">Default</a></li>
+									<li><a href="#" class="button">Default</a></li>
+								</ul>
+								<ul class="actions small">
+									<li><a href="#" class="button primary small">Small</a></li>
+									<li><a href="#" class="button small">Small</a></li>
+								</ul>
+								<ul class="actions stacked">
+									<li><a href="#" class="button primary">Default</a></li>
+									<li><a href="#" class="button">Default</a></li>
+								</ul>
+								<ul class="actions stacked">
+									<li><a href="#" class="button primary small">Small</a></li>
+									<li><a href="#" class="button small">Small</a></li>
+								</ul>
+							</div>
+							<div class="col-6 col-12-medium">
+								<ul class="actions stacked">
+									<li><a href="#" class="button primary fit">Default</a></li>
+									<li><a href="#" class="button fit">Default</a></li>
+								</ul>
+								<ul class="actions stacked">
+									<li><a href="#" class="button primary small fit">Small</a></li>
+									<li><a href="#" class="button small fit">Small</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h4>Table</h4>
+						<h5>Default</h5>
+						<div class="table-wrapper">
+							<table>
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Description</th>
+										<th>Price</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Item One</td>
+										<td>Ante turpis integer aliquet porttitor.</td>
+										<td>29.99</td>
+									</tr>
+									<tr>
+										<td>Item Two</td>
+										<td>Vis ac commodo adipiscing arcu aliquet.</td>
+										<td>19.99</td>
+									</tr>
+									<tr>
+										<td>Item Three</td>
+										<td> Morbi faucibus arcu accumsan lorem.</td>
+										<td>29.99</td>
+									</tr>
+									<tr>
+										<td>Item Four</td>
+										<td>Vitae integer tempus condimentum.</td>
+										<td>19.99</td>
+									</tr>
+									<tr>
+										<td>Item Five</td>
+										<td>Ante turpis integer aliquet porttitor.</td>
+										<td>29.99</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<td colspan="2"></td>
+										<td>100.00</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+
+						<h5>Alternate</h5>
+						<div class="table-wrapper">
+							<table class="alt">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Description</th>
+										<th>Price</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Item One</td>
+										<td>Ante turpis integer aliquet porttitor.</td>
+										<td>29.99</td>
+									</tr>
+									<tr>
+										<td>Item Two</td>
+										<td>Vis ac commodo adipiscing arcu aliquet.</td>
+										<td>19.99</td>
+									</tr>
+									<tr>
+										<td>Item Three</td>
+										<td> Morbi faucibus arcu accumsan lorem.</td>
+										<td>29.99</td>
+									</tr>
+									<tr>
+										<td>Item Four</td>
+										<td>Vitae integer tempus condimentum.</td>
+										<td>19.99</td>
+									</tr>
+									<tr>
+										<td>Item Five</td>
+										<td>Ante turpis integer aliquet porttitor.</td>
+										<td>29.99</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<td colspan="2"></td>
+										<td>100.00</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</section>
+
+					<section>
+						<h4>Buttons</h4>
+						<ul class="actions">
+							<li><a href="#" class="button primary">Primary</a></li>
+							<li><a href="#" class="button">Default</a></li>
+						</ul>
+						<ul class="actions">
+							<li><a href="#" class="button large">Large</a></li>
+							<li><a href="#" class="button">Default</a></li>
+							<li><a href="#" class="button small">Small</a></li>
+						</ul>
+						<ul class="actions fit">
+							<li><a href="#" class="button fit">Fit</a></li>
+							<li><a href="#" class="button primary fit">Fit</a></li>
+							<li><a href="#" class="button fit">Fit</a></li>
+						</ul>
+						<ul class="actions fit small">
+							<li><a href="#" class="button primary fit small">Fit + Small</a></li>
+							<li><a href="#" class="button fit small">Fit + Small</a></li>
+							<li><a href="#" class="button primary fit small">Fit + Small</a></li>
+						</ul>
+						<ul class="actions">
+							<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+							<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+						</ul>
+						<ul class="actions">
+							<li><span class="button primary disabled">Disabled</span></li>
+							<li><span class="button disabled">Disabled</span></li>
+						</ul>
+					</section>
+
+					<section>
+						<h4>Form</h4>
+						<form method="post" action="#">
+							<div class="row gtr-uniform gtr-50">
+								<div class="col-6 col-12-xsmall">
+									<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+								</div>
+								<div class="col-12">
+									<select name="demo-category" id="demo-category">
+										<option value="">- Category -</option>
+										<option value="1">Manufacturing</option>
+										<option value="1">Shipping</option>
+										<option value="1">Administration</option>
+										<option value="1">Human Resources</option>
+									</select>
+								</div>
+								<div class="col-4 col-12-small">
+									<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+									<label for="demo-priority-low">Low</label>
+								</div>
+								<div class="col-4 col-12-small">
+									<input type="radio" id="demo-priority-normal" name="demo-priority">
+									<label for="demo-priority-normal">Normal</label>
+								</div>
+								<div class="col-4 col-12-small">
+									<input type="radio" id="demo-priority-high" name="demo-priority">
+									<label for="demo-priority-high">High</label>
+								</div>
+								<div class="col-6 col-12-small">
+									<input type="checkbox" id="demo-copy" name="demo-copy">
+									<label for="demo-copy">Email me a copy</label>
+								</div>
+								<div class="col-6 col-12-small">
+									<input type="checkbox" id="demo-human" name="demo-human" checked>
+									<label for="demo-human">Not a robot</label>
+								</div>
+								<div class="col-12">
+									<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+								</div>
+								<div class="col-12">
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</section>
+
+					<section>
+						<h4>Image</h4>
+						<h5>Fit</h5>
+						<div class="box alt">
+							<div class="row gtr-uniform gtr-50">
+								<div class="col-12"><span class="image fit"><img src="images/pic06.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+							</div>
+						</div>
+						<h5>Left &amp; Right</h5>
+						<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+						<p><span class="image right"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+					</section>
+
+				</div>
+			</section>
+		-->
+
+		<!-- Footer -->
+			<section id="footer">
+				<ul class="icons">
+					<li>Website source code: <a href="https://github.com/JustinPihowich/639-project" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<!--
+					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					-->
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
